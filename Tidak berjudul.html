@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<textarea id="code"></textarea>
+<h1>Typewriter</h1>
+
+<button onclick="typeWriter()">Click me</button>
+<div id="demo" style="width:1000;font-size:30">
+
+</div>
+<script>
+var i = 0;
+var txt = document.getElementById("code").value;
+var speed = 50;
+
+function typeWriter() {
+	var txt = document.getElementById("code").value;
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>

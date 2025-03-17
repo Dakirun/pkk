@@ -1,0 +1,237 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<script>
+  function visi() {
+    var x = document.getElementById("visi");
+    var y = document.getElementById("m-ar");
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+
+  function home() {
+    var x = document.getElementById("visi");
+    var y = document.getElementById("m-ar");
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+
+  function post() {
+    window.location.href = "post.html";
+  }
+
+  function menu() {
+    var x = document.getElementById("menu");
+    var d = document.getElementById("menu-d");
+    var of = document.getElementById("m-ar");
+    var of2 = document.getElementById("visi");
+
+    if (x.style.display === "block") {
+      x.style.display = "none";
+      d.style.height = "8%";
+      of.style.marginTop = "0%";
+      of2.style.marginTop = "0%";
+    } else {
+      x.style.display = "block";
+      d.style.height = "25%";
+      of.style.marginTop = "15%";
+      of2.style.marginTop = "20%";
+    }
+  }
+
+  window.onload = function() {
+    var d = document.getElementById("menu");
+    var z = document.getElementById("visi");
+    var y = document.getElementById("menu-d");
+    d.style.display = "none";
+    y.style.height = "8%";
+  }
+</script>
+
+<style>
+  .fl {
+    float: left;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  table,
+  td,
+  th {
+    padding: 5px;
+  }
+
+  table {
+    text-align: center;
+  }
+
+  .btn-menu {
+    width: 5%;
+    right: calc(50% - 5% / 2);
+    top: calc(50% - 5% / 2);
+  }
+
+  .full {
+    width: 100%;
+  }
+
+  .art {
+    font-size: 18px;
+  }
+
+  .bodtom {
+    border: 1px solid black;
+    border-top: 1px solid black;
+    width: 100%;
+  }
+
+  .just {
+    text-align: justify;
+  }
+
+  .hid {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+  }
+
+  .top-right {
+    position: absolute;
+    bottom: 8px;
+    left: 23%;
+  }
+
+  .top-right-img {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+
+  .head {
+    left: 50px;
+    font-size: 15px;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  .head2 {
+    font-size: 16px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+    border: none;
+    color: black;
+    background-color: Transparent;
+    justify-content: space-between;
+    margin-top: 0;
+    transform: translateX(0%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background: transparent;
+    border: none !important;
+  }
+
+  div.offset {
+    margin-top: 0%;
+  }
+
+  .nav-bar {
+    width: 100%;
+    background-color: green;
+  }
+
+  .border {
+    border: 1px solid black;
+  }
+
+  .tb-bg {
+    background-color: #f0f0f0;
+    border-collapse: collapse;
+  }
+
+  .cend {
+    margin: auto;
+    width: 50%;
+    border: 0px solid green;
+    padding: 0px;
+  }
+
+  td {
+    background-color: #95c78a;
+  }
+
+  .spct {
+    border-spacing: 20px;
+  }
+</style>
+
+<div class="container">
+  <img src="image/head.png" style="width: 100%;">
+  <img src="image/logo.png" class="top-right-img" style="width: 17%;">
+  <h1 class="top-right" style="font-size: 15px; line-height: 2; color: white;">SMK AL-IRSYAD AL-ISLAMIYAH CIPANAS</h1>
+  <h2 class="top-right" style="font-size: 10px; color: white;">SMK HEBAT SMK BISA</h2>
+</div>
+
+<div class="nav-bar" id="menu-d">
+  <table style="width: 100%; background-color: #83a17c" class="bodtom">
+    <tr align="center">
+      <th align="center">
+        <a>
+          <input type="image" class="nav-btn btn-menu" onclick="menu()" src="image/hamburger.png" />
+        </a>
+      </th>
+    </tr>
+  </table>
+
+  <div style="background-color: #cae8ab; border: 1px solid black">
+    <div class="full cend" id="menu" style="margin: auto;">
+      <table style="width: 100%" class="tb-bg spct">
+        <tr>
+          <td class="bodtom">
+            <button type="image" onclick="home()" class="nav-btn btn menu">Home</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="bodtom">
+            <button type="image" onclick="visi()" class="nav-btn">Profil Sekolah</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="bodtom">
+            <button type="image" onclick="post()" class="nav-btn">Post</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="visi" class="hid">
+  <h1 class="head2">Visi Dan Misi</h1>
+  <a></a>
+  <h1 class="head2">Visi</h1>
+  <a>Lulusan yang memiliki skill dan akhlak mulia</a>
+  <h1 class="head2">Misi</h1>
+  <p class="just">1. Menanamkan nilai-nilai aqidah/ketauhidan yang kuat</p>
+  <p class="just">2. Membentuk karakter atau akhlak yang baik, dengan memberikan contoh sesuai ajaran agama dan menjadi penghafal Al-Qur'an (Metode ummi) yang senantiasa dekat dengan Al-Qur'an serta mengamalkannya</p>
+  <p class="just">3. Memberikan pemahaman tentang ilmu agama, pengetahuan, dan skill yang mumpuni di bidangnya, sebagai bekal untuk bersaing di masyarakat dan bermanfaat di masa yang akan datang</p>
+</div>
+
+<div id="m-ar" style="width: 95%; float: left; margin-left: 2%;">
+  <h1 class="head" style="font-size: 17px;">Berita</h1>
+  <p><a style="margin-bottom: -10px;">10 feb, 2024</a></p>
+  <p><a style="font-size: 18px; color: black" href="artikel.html">Paskibra SMK Al-Irsyad Cipanas Meraih Juara 2 Dalam Lomba Antar Provinsi</a></p>
+  <img src="image/artikel.png" style="width: 50%; center: 0px; margin-left: auto; margin-right: auto;">
+  <p style="text-align: justify;">
+    <a style="font-size: 12px">Cipanas, - Prestasi membanggakan kembali diraih oleh Pasukan Pengibar Bendera (Paskibra) SMK Al-Irsyad Cipanas. Tim Paskibra sekolah ini berhasil meraih Juara 2 dalam ajang lomba ketangkasan baris-berbaris (LKBB) tingkat antar provinsi yang digelar pada Minggu, 8 Februari 2024, di Cianjur.</a>
+  </p>
+</div>
